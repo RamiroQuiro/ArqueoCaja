@@ -1,8 +1,9 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 function Navigator() {
   return (
-    <div>Navigator</div>
+   <Sidebar/>
   )
 }
 
