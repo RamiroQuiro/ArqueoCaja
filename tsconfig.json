@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "config/conexionDataBase.js"  ],
+, "database/conexionDataBase.js"  ],
   "exclude": [
     "node_modules"
   ]

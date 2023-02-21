@@ -1,14 +1,31 @@
-export default function(req,res){
-        switch (req.method) {
-            case 'GET':
-                res.json('esta es la url man')
-                break;  
-            case 'POST':
-                const {id,cantidadBilletes,valorNominal}=req.body
-                const respuesta=JSON.stringify(req.body)
-                console.log(`este es el id ${id}, este son los billetes: ${cantidadBilletes}`)
-                break
-            default:
-                break;
-        }
+import { getConecction, querys, sql } from "../../../database/";
+
+export default async function (req, res) {
+  switch (req.method) {
+    case "GET":
+      res.json("esta es la url man");
+      break;
+    case "POST":
+      insertData(req, res);
+      break;
+    default:
+      break;
+  }
 }
+
+const insertData = async (req:any, res:any) => {
+  try {
+    const pool = await getConecction();
+    const { id, cantidadBilletes, valorNominal } = req.body;
+    await pool
+      .request()
+      .input("cantidadBilletes", sql.Int, cantidadBilletes)
+      .input("valorNominal", sql.Int, valorNominal)
+      .query(
+       querys.getInsertRegistro
+      );
+    res.json("estado insterdad correctamente");
+  } catch (error) {
+    console.log(error);
+  }
+};

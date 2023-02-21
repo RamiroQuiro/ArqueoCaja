@@ -1,9 +1,10 @@
 "use client";
-
+import  Link  from "next/link";
 interface Props{
     children:string,
     link:string
 }
+
 export default function ButtonSidebar({children,link}:Props) {
 
 
@@ -11,8 +12,8 @@ export default function ButtonSidebar({children,link}:Props) {
     <button>
       {" "}
       <li className="flex w-full justify-between  text-gray-300 cursor-pointer items-center mb-6">
-        <a
-          href="javascript:void(0)"
+        <Link
+          href={link}
           className="flex gap-3 items-center group focus:outline-none focus:ring-2 focus:ring-white"
         >
           <svg
@@ -34,7 +35,7 @@ export default function ButtonSidebar({children,link}:Props) {
             <rect x="14" y="14" width="6" height="6" rx="1"></rect>
           </svg>
           <span className="text-sm ml-2 ">{children}</span>
-        </a>
+        </Link>
       </li>
     </button>
   );

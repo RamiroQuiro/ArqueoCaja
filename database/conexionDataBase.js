@@ -21,4 +21,4 @@ const getConecction = async () => {
 
 };
 
-export {getConecction}
+export {getConecction,sql}

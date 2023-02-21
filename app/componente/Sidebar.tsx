@@ -11,7 +11,7 @@ export default function Sidebar() {
             <ul className="mt-12">
               <ButtonSidebar 
               children="Dashboard"
-              link="/dashboard"
+              link="/listadoCajeros"
               />
               <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                 <a
