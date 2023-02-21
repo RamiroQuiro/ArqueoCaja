@@ -3,10 +3,10 @@
 import { useState } from "react";
 import ButtonFormularioRegistroBilletines from "./ButtonFormularioRegistroBilletines";
 
-interface PropsEstado {
+interface  PropsEstado {
   sucursal: string;
-  cajeros: number;
-  cantBilletes: number;
+  id: number;
+  cantidadBilletes: number;
   valorNominal: number;
 }
 
@@ -38,8 +38,8 @@ export default function FormularioIngresoBilletes() {
           </select>
         </div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-          <label htmlFor="cajeros">Elegir Cajero</label>
-          <select name="cajeros" onChange={handleChange} id="cajeros">
+          <label htmlFor="id">Elegir Cajero</label>
+          <select name="id" onChange={handleChange} id="id">
             <option value={1}>001 - ATM-2010</option>
             <option value={2}>002 - ATM-2015</option>
             <option value={3}>003 - ATM-2020</option>
@@ -51,7 +51,7 @@ export default function FormularioIngresoBilletes() {
             <label>Cantidad de billetes </label>
             <input
               onChange={handleChange}
-              name="cantBilletes"
+              name="cantidadBilletes"
               className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="number"
               placeholder="ej: 20000"
@@ -70,7 +70,7 @@ export default function FormularioIngresoBilletes() {
             />
           </div>
         </div>
-        <ButtonFormularioRegistroBilletines />
+        <ButtonFormularioRegistroBilletines state={estadoForm}/>
       </div>
       {/*     
     <div

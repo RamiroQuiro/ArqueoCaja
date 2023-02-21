@@ -1,13 +1,9 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { getConecction } from "../../config/conexionDataBase";
 
-type Data = {
-  name: string
-}
+export default async function handle(req:any,res:any){
+  const pool =await getConecction()
+  const {recordset}=await pool.request().query('SELECT * FROM cajeros')
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
+  res.json(recordset)
+
 }
