@@ -3,7 +3,7 @@ import ButtonSidebar from "./ButtonSidebar";
 
 export default function Sidebar() {
   return (
-    <div className="w-2/12 h-full absolute left-0 top-0 border-t-2">
+    <div className="w-2/12 h-full absolute left-0 top-0 ">
       <div className="flex flex-col h-screen relative">
         <div className="w-16 hover:w-full duration-300  overflow-hidden absolute sm:relative bg-neutral-800 shadow md:h-full flex-col h-screen justify-between  sm:flex">
           <div className="px-8">

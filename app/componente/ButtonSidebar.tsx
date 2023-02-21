@@ -10,10 +10,10 @@ export default function ButtonSidebar({children,link}:Props) {
   return (
     <button>
       {" "}
-      <li className="flex w-full justify-between text-gray-300 cursor-pointer items-center mb-6">
+      <li className="flex w-full justify-between  text-gray-300 cursor-pointer items-center mb-6">
         <a
           href="javascript:void(0)"
-          className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
+          className="flex gap-3 items-center group focus:outline-none focus:ring-2 focus:ring-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export default function ButtonSidebar({children,link}:Props) {
             <rect x="4" y="14" width="6" height="6" rx="1"></rect>
             <rect x="14" y="14" width="6" height="6" rx="1"></rect>
           </svg>
-          <span className="text-sm ml-2">{children}</span>
+          <span className="text-sm ml-2 ">{children}</span>
         </a>
       </li>
     </button>
