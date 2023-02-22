@@ -1,4 +1,4 @@
-import { getConecction,querys } from "../../database/";
+import { getConecction, querys } from "../../database"
 
 export default async function handle(req:any,res:any){
   const pool =await getConecction()

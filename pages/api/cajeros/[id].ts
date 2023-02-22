@@ -3,8 +3,7 @@ import { getConecction, querys, sql } from "../../../database/";
 export default async function (req, res) {
   switch (req.method) {
     case "GET":
-      consultaCajeroID(req,res)
-      res.json("estas consultando sobre el cajeron con el numero de id: "+req.query.id);
+      consultaCajeroID(req, res);
       break;
     case "POST":
       insertData(req, res);
@@ -14,7 +13,7 @@ export default async function (req, res) {
   }
 }
 
-const insertData = async (req:any, res:any) => {
+const insertData = async (req: any, res: any) => {
   try {
     const pool = await getConecction();
     const { id, cantidadBilletes, valorNominal } = req.body;
@@ -22,20 +21,25 @@ const insertData = async (req:any, res:any) => {
       .request()
       .input("cantidadBilletes", sql.Int, cantidadBilletes)
       .input("valorNominal", sql.Int, valorNominal)
-      .query(
-       querys.getInsertRegistro
-      );
+      .query(querys.getInsertRegistro);
     res.json("estado insterdad correctamente");
   } catch (error) {
     console.log(error);
   }
 };
 
-
-const consultaCajeroID=async (req,res)=>{
-    const pool=await getConecction()
-    const {id}=req.query
-    const resultQuery=await pool.request().input('id',id).query(querys.queryById)
-res.send(resultQuery.recordset[0])
-// cKonsole.log(resultQuery)
-}
+const consultaCajeroID = async (req, res) => {
+  const pool = await getConecction();
+  const { id } = req.query;
+  const resultQuery = await pool
+    .request()
+    .input("id", id)
+    .query(querys.queryById);
+  const resultQueryGabetas = await pool
+    .request()
+    .input("id", id)
+    .query(querys.queryGabetasIdCajeto);
+  const arrayTemp = [resultQuery.recordset[0], resultQueryGabetas.recordset];
+  res.send(arrayTemp);
+  // cKonsole.log(resultQuery)
+};

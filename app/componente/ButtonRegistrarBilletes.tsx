@@ -1,11 +1,10 @@
 "use client"
 import {useRouter} from "next/navigation";
-export default function ButtonRegistrarBilletes() {
+export default function ButtonRegistrarBilletes({id}) {
 const router=useRouter()
 
-
 const handleClickRegistrarBilletes=()=>{
-    router.push('/FormularioRegistroBilletes')
+    router.push(`/listadoCajeros/formularioCajero/${id}`)
 }
   return (
     <button
