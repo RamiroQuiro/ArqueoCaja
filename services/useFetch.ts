@@ -3,7 +3,7 @@ const urlFetchInsert='http://localhost:3000/api/cajeros/instert'
 
 const useFetchMSSQL=async (body:any)=>{
     const getQuery=await fetch(urlFetchInsert,{
-        method:'POST' ,
+        method:'PUT' ,
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body
     })

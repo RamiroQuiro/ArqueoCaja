@@ -5,7 +5,7 @@ export default async function (req, res) {
     case "GET":
       consultaCajeroID(req, res);
       break;
-    case "POST":
+    case "PUT":
       insertData(req, res);
       break;
     default:

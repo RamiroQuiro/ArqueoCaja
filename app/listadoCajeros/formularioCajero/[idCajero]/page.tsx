@@ -129,7 +129,7 @@ export default function FormularioIngresoBilletes({ params }: any) {
             />
           </div>
         </div>
-        <ButtonFormularioRegistroBilletines state={estadoForm} />
+        <ButtonFormularioRegistroBilletines state={estadoForm} idCajero={idCajero} />
       </div>
       {/*
        */}

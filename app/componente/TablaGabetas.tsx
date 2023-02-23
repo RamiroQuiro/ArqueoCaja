@@ -39,7 +39,7 @@ export default function TablaGabetas({ gabetas }:any) {
           </th>
           <th>{gabeta.cantidadBilletes}</th>
           <th>{gabeta.valorNominal}</th>
-          <th>{gabeta.totalDinero}</th>
+          <th>{gabeta.cantidadBilletes*gabeta.valorNominal}</th>
         </tr>
         ))}
         

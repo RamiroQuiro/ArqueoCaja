@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from "next/navigation";
 import { useFetchMSSQL } from "../../services/useFetch";
 interface  PropsEstado {
   sucursal: string;
@@ -7,11 +8,13 @@ interface  PropsEstado {
   valorNominal: number;
 }
 
-export default function ButtonFormularioRegistroBilletines({state}) {
+export default function ButtonFormularioRegistroBilletines({state,idCajero}) {
+  const router=useRouter()
 
   const handleRegistrar=(state)=>{
     const body=JSON.stringify(state)
     useFetchMSSQL(body)
+    router.push('/listadoCajeros/cajero/'+idCajero)
   }
   return (
     <button
