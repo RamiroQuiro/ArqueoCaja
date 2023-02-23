@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 
-export default function ColumnaTablaBodyCajeros({cajero}) {
+export default function ColumnaTablaBodyCajeros({cajero}:any) {
     const router = useRouter();
 
     const irACajero=()=>{

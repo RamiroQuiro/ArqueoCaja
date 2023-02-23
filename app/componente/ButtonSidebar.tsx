@@ -1,4 +1,5 @@
 "use client";
+import { spawn } from "child_process";
 import  Link  from "next/link";
 interface Props{
     children:string,
@@ -6,7 +7,7 @@ interface Props{
     svg:React.SVGProps<SVGAElement>
 }
 
-export default function ButtonSidebar({children,href,svg}:Props) {
+export default function ButtonSidebar({children,href,svg}:any) {
 
 
   return (
@@ -14,7 +15,7 @@ export default function ButtonSidebar({children,href,svg}:Props) {
       {" "}
       <li className="flex w-full justify-between ring-0 outline-none border-0 focus:outline-none text-gray-300 cursor-pointer hover:text-white duration-150 items-center mb-6">
         <Link
-          href={`${href}`}
+          href={href}
           className="flex gap-3 items-center group "
         >
       {svg}
@@ -24,3 +25,5 @@ export default function ButtonSidebar({children,href,svg}:Props) {
     </button>
   );
 }
+
+

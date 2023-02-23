@@ -24,7 +24,7 @@ export default function FormularioIngresoBilletes({ params }: any) {
     getquery();
     if (estadoForm.idGabeta) {
       const find: any = cajeroGabetas[1].find(
-        (cajero) => cajero.idGabeta == estadoForm.idGabeta
+        (cajero:any) => cajero.idGabeta == estadoForm.idGabeta
       );
       setSelectGabeta(find);
     }
@@ -59,7 +59,7 @@ export default function FormularioIngresoBilletes({ params }: any) {
             id="idGabeta"
           >
             {cajeroGabetas &&
-              cajeroGabetas[1]?.map((gabeta) => (
+              cajeroGabetas[1]?.map((gabeta:any) => (
                 <option
                   value={gabeta.idGabeta}
                   className="bg-gray-100 py-2 px-5  rounded-lg font-medium text-right"

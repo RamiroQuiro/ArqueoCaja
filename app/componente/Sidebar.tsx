@@ -31,7 +31,7 @@ export default function Sidebar() {
                   </svg>
                 }
                 children="Dashboard"
-                link="/"
+                link={"/"}
               />
               <ButtonSidebar
                 svg={

@@ -25,6 +25,7 @@ export default function TablaCajeros() {
               
             </tr>
           </thead>
+          // tslint:disable-next-line
         <TablaCajerosBody />
         </table>
   )
