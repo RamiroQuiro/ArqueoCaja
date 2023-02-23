@@ -3,7 +3,7 @@ import { useFetchMSSQL } from "../../services/useFetch";
 interface  PropsEstado {
   sucursal: string;
   cajeros: number;
-  cantBilletes: number;
+  cantidadBilletes: number;
   valorNominal: number;
 }
 

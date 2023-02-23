@@ -16,13 +16,14 @@ export default async function (req, res) {
 const insertData = async (req: any, res: any) => {
   try {
     const pool = await getConecction();
-    const { id, cantidadBilletes, valorNominal } = req.body;
+    const { idGabeta, cantidadBilletes, valorNominal } = req.body;
     await pool
       .request()
+      .input("idGabeta",idGabeta)
       .input("cantidadBilletes", sql.Int, cantidadBilletes)
       .input("valorNominal", sql.Int, valorNominal)
-      .query(querys.getInsertRegistro);
-    res.json("estado insterdad correctamente");
+      .query(querys.queryUPDATEGabetas);
+    res.json("estado actualizado correctamente");
   } catch (error) {
     console.log(error);
   }
