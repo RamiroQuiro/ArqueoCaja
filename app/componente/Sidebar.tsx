@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
     <div className="md:w-[14%] w- h-1/2 z-20 absolute left-0 top-0 ">
       <div className="flex flex-col h-screen relative">
-        <div className="w-16 hover:w-full duration-300  overflow-x-hidden absolute sm:relative bg-neutral-800 shadow  flex-col min-h-screen h-full items-stretch justify-between  sm:flex">
+        <div className="w-16 hover:w-full duration-300  overflow-x-hidden absolute sm:relative bg-neutral-800 hover:bg-neutral-900 mt-16 shadow  flex-col min-h-screen h-full items-stretch justify-between  sm:flex">
           <div className="px-6">
             <ul className="mt-36 flex flex-col">
               <ButtonSidebar
