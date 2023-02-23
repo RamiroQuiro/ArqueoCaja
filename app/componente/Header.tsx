@@ -5,8 +5,8 @@ export default function Header() {
     <nav className="absolute top-0 left-0 w-full mx-auto items-center flex justify-end bg-neutral-800 text-neutral-100 border-b border-gray-100/50 ">
         <div><h1>Logo</h1></div>
       <ul className="flex py-5 items-center justify-end w-10/12 mx-auto space-x-6">
-        <li className="font-semibold ">Home</li>
-        <li className="font-semibold">Articles</li>
+        <li className="font-semibold ">Hola RamiroCode</li>
+        <li className="font-semibold">Salir Sesion</li>
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -8,10 +8,10 @@ interface  PropsEstado {
   valorNominal: number;
 }
 
-export default function ButtonFormularioRegistroBilletines({state,idCajero}) {
+export default function ButtonFormularioRegistroBilletines({state,idCajero}:any) {
   const router=useRouter()
 
-  const handleRegistrar=(state)=>{
+  const handleRegistrar=(state:any)=>{
     const body=JSON.stringify(state)
     useFetchMSSQL(body)
     router.push('/listadoCajeros/cajero/'+idCajero)

@@ -3,26 +3,93 @@ import ButtonSidebar from "./ButtonSidebar";
 
 export default function Sidebar() {
   return (
-    <div className="w-2/12 h-full absolute left-0 top-0 ">
+    <div className="md:w-[14%] w- h-1/2 z-20 absolute left-0 top-0 ">
       <div className="flex flex-col h-screen relative">
-        <div className="w-16 hover:w-full duration-300  overflow-hidden absolute sm:relative bg-neutral-800 shadow md:h-full flex-col h-screen justify-between  sm:flex">
-          <div className="px-8">
-            <div className="h-16 w-full flex items-center">Logo</div>
-            <ul className="mt-12">
-              <ButtonSidebar 
-              children="Dashboard"
-              link="/listadoCajeros"
+        <div className="w-16 hover:w-full duration-300  overflow-x-hidden absolute sm:relative bg-neutral-800 shadow  flex-col min-h-screen h-full items-stretch justify-between  sm:flex">
+          <div className="px-6">
+            <ul className="mt-36 flex flex-col">
+              <ButtonSidebar
+                key={1}
+                svg={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-grid"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                  </svg>
+                }
+                children="Dashboard"
+                link="/"
               />
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
-                <a
-                  href="javascript:void(0)"
-                  className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
-                >
+              <ButtonSidebar
+                svg={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-stack"
+                    width="24"
+                    height="24"
+                    viewBox="
+                0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <polyline points="12 4 4 8 12 12 20 8 12 4" />
+                    <polyline points="4 12 12 16 20 12" />
+                    <polyline points="4 16 12 20 20 16" />
+                  </svg>
+                }
+                children={"Cajeros"}
+                link={"/listadoCajeros"}
+                key={2}
+              />
+              <ButtonSidebar
+                svg={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-stack"
+                    width="24"
+                    height="24"
+                    viewBox="
+                0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <polyline points="12 4 4 8 12 12 20 8 12 4" />
+                    <polyline points="4 12 12 16 20 12" />
+                    <polyline points="4 16 12 20 20 16" />
+                  </svg>
+                }
+                children={"Sucursales"}
+                link={"/listadoCajeros"}
+                key={2}
+              />
+              <ButtonSidebar
+                svg={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-puzzle"
-                    width="18"
-                    height="18"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
@@ -33,10 +100,36 @@ export default function Sidebar() {
                     <path stroke="none" d="M0 0h24v24H0z"></path>
                     <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"></path>
                   </svg>
-                  <span className="text-sm ml-2">Products</span>
-                </a>
-              </li>
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
+                }
+                children={"Mi Sesion"}
+                link={"/listadoCajeros"}
+                key={3}
+              />
+              <ButtonSidebar
+                svg={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-settings"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                }
+                children={"Configuraciones"}
+                link={"/listadoCajeros"}
+                key={4}
+              />
+
+              {/* <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                 <a
                   href="javascript:void(0)"
                   className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
@@ -59,8 +152,8 @@ export default function Sidebar() {
                   </svg>
                   <span className="text-sm ml-2">Performance</span>
                 </a>
-              </li>
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
+              </li> */}
+              {/* <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                 <a
                   href="javascript:void(0)"
                   className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
@@ -84,8 +177,8 @@ export default function Sidebar() {
                   </svg>
                   <span className="text-sm ml-2">Deliverables</span>
                 </a>
-              </li>
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
+              </li> */}
+              {/* <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                 <a
                   href="javascript:void(0)"
                   className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
@@ -107,8 +200,8 @@ export default function Sidebar() {
                   </svg>
                   <span className="text-sm ml-2">Invoices</span>
                 </a>
-              </li>
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
+              </li> */}
+              {/* <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                 <a
                   href="javascript:void(0)"
                   className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
@@ -132,40 +225,19 @@ export default function Sidebar() {
                   </svg>
                   <span className="text-sm ml-2">Inventory</span>
                 </a>
-              </li>
-              <li className="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center">
-                <a
-                  href="javascript:void(0)"
-                  className="flex gap-3 items-center focus:outline-none focus:ring-2 focus:ring-white"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-settings"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                  <span className="text-sm ml-2">Settings</span>
-                </a>
-              </li>
+              </li> */}
             </ul>
             <div className="flex justify-center mt-48 mb-4 w-full">
               <div className="relative">
-                <div className="text-gray-300 absolute ml-4 inset-0 m-auto w-4 h-4">
+                <div
+                  className="text-gray-300 absolute ml-2
+                 inset-0 m-auto w-4 h-4"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="icon icon-tabler icon-tabler-search"
-                    width="16"
-                    height="16"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
@@ -186,7 +258,7 @@ export default function Sidebar() {
               </div>
             </div>
           </div>
-          <div className="px-8 border-t border-gray-700">
+          {/* <div className="px-6 border-t border-gray-700">
             <ul className="w-full flex items-center justify-between bg-gray-800">
               <li className="cursor-pointer text-white pt-5 pb-3">
                 <button
@@ -282,7 +354,7 @@ export default function Sidebar() {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
         {/* <div className="w-64 z-40 absolute bg-gray-800 shadow md:h-full flex-col justify-between sm:hidden transition duration-150 ease-in-out" id="mobile-nav">
                             <button aria-label="toggle sidebar" id="openSideBar" className="h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 rounded focus:ring-gray-800" >

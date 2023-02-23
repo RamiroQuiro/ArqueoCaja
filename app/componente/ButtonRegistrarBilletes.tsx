@@ -1,6 +1,10 @@
 "use client"
 import {useRouter} from "next/navigation";
-export default function ButtonRegistrarBilletes({id}) {
+
+interface Props{
+  id:string
+}
+export default function ButtonRegistrarBilletes({id}:Props) {
 const router=useRouter()
 
 const handleClickRegistrarBilletes=()=>{

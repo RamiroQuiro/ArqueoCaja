@@ -3,6 +3,8 @@ import ColumnaTablaBodyCajeros from "./ColumnaTablaBodyCajeros";
 
 export default async function TablaCajerosBody() {
   const respuestaCajeros = await useFetchQueryCajeroAllCajeros();
+  if(!respuestaCajeros)return
+  
   return (
     <tbody>
       {respuestaCajeros?.map((cajero: any, i: number) => (
